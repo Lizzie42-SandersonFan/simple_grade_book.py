@@ -1,4 +1,8 @@
 # Add student: Get student name and id. Create empty list for future grade holding
+def add_student():
+    name = input("Enter student name:\n").strip()
+    stu_id = input("Enter student ID:\n").strip()
+    
 
 # Add grade: Show students with ID. Have user enter ID for student that needs a grade added. Enter a number between 0-100 (will need to be checked. Check if it is even a number first). Find the student by ID and append that grade into the list created
 

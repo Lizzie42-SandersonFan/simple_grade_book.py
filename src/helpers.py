@@ -10,3 +10,9 @@ def type_print(string, delay = 0.06):
 # Clear the terminal for easier reading
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
+
+def is_number(string_check):
+    if string_check.isdigit() == True:
+        return True
+    else:
+        return False
