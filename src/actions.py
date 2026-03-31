@@ -1,21 +1,22 @@
 from all_classes import *
 from helpers import *
 # Add student: Get student name and id. Create empty list for future grade holding
-def add_student():
+def add_new_student():
     name = input("Enter student FULL name:\n").strip()
     stu_id = input("Enter student ID:\n").strip()
     student = MakeStudent(name, stu_id)
-    stu_avrg = student.average_grade
+    stu_avrg = student.average_grade()
     stu_letter = student.get_letter(stu_avrg)
+    child = [name, stu_id, student.grades, stu_avrg, stu_letter]
 
-    GradeBook.add_student(name, stu_id, student.grades, stu_avrg, stu_letter)
+    GradeBook.add_student(child)
     print("Student added!")
     MakeStudent.student_overview()
     return
     
 
 # Add grade: Show students with ID. Have user enter ID for student that needs a grade added. Enter a number between 0-100 (will need to be checked. Check if it is even a number first). Find the student by ID and append that grade into the list created
-def add_grade():
+def add_stu_grade():
     GradeBook.display_students()
     while True:
         name = input("Enter student name:\n").strip()
@@ -67,8 +68,8 @@ def view_student():
 
 # View ALL Students: Show Name, ID, Average, Letter Grade for EACH student in CSV
 def view_all():
-    # BUILD
-    pass
+    GradeBook.view_all_kids()
+    return
 
 # Class Summary: Names with corresponding Letter Grade
 def class_sum():
