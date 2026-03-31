@@ -13,6 +13,6 @@ def clear_screen():
 
 def is_number(string_check):
     if string_check.isdigit() == True:
-        return True
+        return True, int(string_check)
     else:
         return False
